@@ -1,0 +1,18 @@
+.container {
+  position: fixed;
+  background-color: var(--bgSoft);
+  min-height: 20vh;
+  border-radius: 10px;
+  padding: 5px;
+}
+.item {
+  position: relative;
+  
+}
+.uploadSection{
+    padding: 15px;
+}
+
+.subHeading{
+    font: 1em sans-serif;
+}

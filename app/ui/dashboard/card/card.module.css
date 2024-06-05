@@ -1,0 +1,47 @@
+.cardsContainer {
+    display: flex;
+    gap: 20px; /* This adds a gap between the cards */
+    padding: 20px; /* Optional: Adds padding around the container */
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px var(--bgSoft);
+    height: 20vh;
+    width: 100%;
+    cursor: pointer;
+  }
+  .card:hover{
+    background-color: #2e374a;
+  }
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    font: 1em sans-serif;
+  }
+  
+  .subTitle {
+    font-size: 14px;
+    color: #888;
+    font: 1em sans-serif;
+  }
+  
+  .total {
+    font-size: 20px;
+    color: var(--textSoft);
+  }
+  

@@ -1,0 +1,47 @@
+.container{
+    background-color: var(--bgSoft);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.title{
+    margin-bottom: 20px;
+    font-weight: 200;
+    color: var(--textSoft);
+}
+.table{
+    width: 100%;
+}
+.table td{
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.table th{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font: 1em sans-serif;
+    font-size: 12px;
+}
+
+.revoked {
+    color: red; /* Example color for revoked status */
+  }
+  
+  .submitted {
+    color: orange; /* Example color for submitted status */
+  }
+  
+  .pending {
+    color: yellow; /* Example color for pending status */
+  }
+  
+  .accessed {
+    color: green; /* Example color for accessed status */
+  }
+  
+  .defaultColor {
+    color: black; /* Default color for unknown statuses */
+  } 
