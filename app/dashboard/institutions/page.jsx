@@ -1,63 +1,58 @@
 import React from "react";
-import styles from "../../ui/dashboard/users/users.module.css";
+import styles from "../../ui/dashboard/institutions/institutions.module.css";
+import institutionData from "@/app/Contants/institutionData";
 import Search from "@/app/ui/dashboard/search/search";
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
-import { MdAdd, MdDelete, MdPreview } from "react-icons/md";
-import { fetchUsers } from  "../../databaseConnection/routes/routes"
+import { MdPreview, MdDelete } from "react-icons/md";
 
-const UsersPage =  async ({searchParams}) => {
-
-  const q=searchParams?.q || ""
-  const users = await fetchUsers(q);
-
+const InstitutionDashboard = () => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a user..." />
-        <Link href="/dashboard/add-users">
-          <MdAdd size={40} className={styles.addButton} />
-        </Link>
+        <Search placeholder="Search for an Institution..." />
       </div>
       <table className={styles.table}>
         <thead>
           <tr>
             <th></th>
             <th>Name</th>
-            <th>Surname</th>
-            <th>Email</th>
+            <th>Address</th>
+            <th>Contact Email</th>
             <th>Phone Number</th>
+            <th>Authorized Person</th>
             <th>Role</th>
-            <th>Institution</th>
             <th>Next Review Date</th>
-            <th>Action</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
-            <tr key={user._id}>
+          {institutionData.map((institution, index) => (
+            <tr key={index}>
               <td>
-                <div className={styles.user}>
+                <div className={styles.institution}>
                   <Image
                     src={"/noavatar.png"}
                     alt=""
                     width={40}
                     height={40}
-                    className={styles.userImage}
+                    className={styles.institutionImage}
                   />
                 </div>
               </td>
-              <td>{user.name}</td>
-              <td>{user.surname}</td>
-              <td>{user.email}</td>
-              <td>{user.phoneNumber}</td>
-              <td>{user.userRole}</td>
-              <td>{user.institutionDetails.institutionName}</td>
-              <td>{new Date(user.nextReviewDate).toLocaleString()}</td>
+              <td>{institution.name}</td>
+              <td>{institution.address}</td>
+              <td>{institution.contactEmail}</td>
+              <td>{institution.phoneNumber}</td>
+              <td>{institution.authorizedPerson.name}</td>
+              <td>{institution.authorizedPerson.role}</td>
+              <td>
+                {new Date(institution.nextReviewDate).toLocaleDateString()}
+              </td>
               <td>
                 <div className={styles.buttons}>
-                  <Link href={`/dashboard/users/${user._id}`}>
+                  <Link href={"/"}>
                     <MdPreview
                       size={40}
                       className={`${styles.button} ${styles.view}`}
@@ -78,4 +73,4 @@ const UsersPage =  async ({searchParams}) => {
   );
 };
 
-export default UsersPage;
+export default InstitutionDashboard;

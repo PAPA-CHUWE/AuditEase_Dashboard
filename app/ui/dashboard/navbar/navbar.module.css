@@ -1,40 +1,53 @@
-.container{
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--bgSoft);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
+.container {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--bgSoft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
 }
 
-.title{
-    color: var(--textSoft);
-    font-weight: bold;
-    text-transform: capitalize;
+.title {
+  color: var(--textSoft);
+  font-weight: bold;
+  text-transform: capitalize;
 }
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.search{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color:#2e374a;
-    padding: 10px;
-    border-radius: 10px;
-    width: max-content;
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #2e374a;
+  padding: 10px;
+  border-radius: 10px;
+  width: max-content;
 }
-.input{
-    background-color: transparent;
-    border: none;
-    color: var(--text);
-    outline: none;
+.input {
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  outline: none;
+  font: 1em sans-serif;
 }
-.icons{
-    display: flex;
-    gap: 20px;
+.icons {
+  display: flex;
+  gap: 20px;
+}
+.iconChat,
+.iconNotifications,
+.iconPublic {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 100%;
+}
+.iconChat:hover,
+.iconNotifications:hover,
+.iconPublic:hover {
+  background-color: #7180a2;
 }

@@ -25,6 +25,10 @@
     font: 1em sans-serif;
     font-size: 12px;
 }
+.table tr:hover {
+  background-color:#2e374a; /* Yellow background color on hover */
+  cursor: pointer;
+}
 
 .revoked {
     color: red; /* Example color for revoked status */

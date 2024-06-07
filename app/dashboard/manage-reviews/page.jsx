@@ -2,9 +2,7 @@ import React from 'react'
 
 const ManageReviews = () => {
   return (
-    <div>
-      ManageReviews
-    </div>
+    <div>ManageReviews</div>
   )
 }
 
